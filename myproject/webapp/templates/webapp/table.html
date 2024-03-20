@@ -1,0 +1,117 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <!-- Main table header -->
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Aircraft Type</th>
+                            <th>AOBT</th>
+                            <th>Arrival Airport</th>
+                            <th>Call Sign</th>
+                            <th>Departure Airport</th>
+                        </tr>
+                    </thead>
+                    <!-- Main table body -->
+                    <tbody id="main-table-body">
+                        <!-- Rows will be dynamically populated -->
+                    </tbody>
+                </table>
+            </div>
+            <button id="edit-button" class="btn btn-primary" onclick="toggleHiddenRows()">Edit</button>
+        </div>
+    </div>
+</div>
+
+<div id="hidden-rows" style="display: none;">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <!-- Hidden table containing additional rows -->
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Address Source</th>
+                                <th>Address</th>
+                                <th>EOBT</th>
+                                <th>File Date</th>
+                                <th>Flight State</th>
+                                <th>Flight Type</th>
+                                <th>Registration Mark</th>
+                                <th>Initial Flight Rule</th>
+                                <th>NM IFPS ID</th>
+                                <th>NM Tactical ID</th>
+                            </tr>
+                        </thead>
+                        <tbody id="hidden-table-body">
+                            <!-- Hidden rows will be dynamically populated -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block script %}
+<script>
+    // JavaScript code to populate the table with data from df_facture
+    // Assuming df_facture is a JavaScript variable containing the DataFrame data
+
+    // Function to populate the main table with the first 4 rows
+    function populateMainTable() {
+        var mainTableBody = document.getElementById("main-table-body");
+
+        for (var i = 0; i < 4; i++) {
+            var row = mainTableBody.insertRow();
+            row.insertCell().textContent = df_facture['airc_type'];
+            row.insertCell().textContent = df_facture['aobt'];
+            row.insertCell().textContent = df_facture['flpl_arrv_airp'];
+            row.insertCell().textContent = df_facture['flpl_call_sign'];
+            row.insertCell().textContent = df_facture['flpl_depr_airp'];
+        }
+    }
+
+    // Function to populate the hidden table with the remaining rows
+    function populateHiddenTable() {
+        var hiddenTableBody = document.getElementById("hidden-table-body");
+
+        for (var i = 4; i < df_facture.length; i++) {
+            var row = hiddenTableBody.insertRow();
+            row.insertCell().textContent = df_facture['airc_modes_addr_source'];
+            row.insertCell().textContent = df_facture['airc_modes_address'];
+            row.insertCell().textContent = df_facture['eobt'];
+            row.insertCell().textContent = df_facture['file_date'];
+            row.insertCell().textContent = df_facture['flight_state'];
+            row.insertCell().textContent = df_facture['flight_type'];
+            row.insertCell().textContent = df_facture['ifps_registration_mark'];
+            row.insertCell().textContent = df_facture['initial_flight_rule'];
+            row.insertCell().textContent = df_facture['nm_ifps_id'];
+            row.insertCell().textContent = df_facture['nm_tactical_id'];
+        }
+    }
+
+    // Function to toggle the visibility of the hidden rows
+    function toggleHiddenRows() {
+        var hiddenRows = document.getElementById("hidden-rows");
+
+        if (hiddenRows.style.display === "none") {
+            hiddenRows.style.display = "block";
+            document.getElementById("edit-button").textContent = "Hide";
+            populateHiddenTable(); // Populate the hidden table when it becomes visible
+        } else {
+            hiddenRows.style.display = "none";
+            document.getElementById("edit-button").textContent = "Edit";
+        }
+    }
+
+    // Call the function to populate the main table when the page loads
+    window.onload = populateMainTable;
+</script>
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'webapp/base.html' %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<body>
+
+    <div class="container bg-light shadow-md p-5 form-layout">
+
+        <h3> Update record </h3>
+
+        <h6> Update your record down below. </h6>
+
+        <hr>
+        <br>
+
+        <form method="POST" autocomplete="off">
+
+            {% csrf_token %}
+
+            {{form.airc_type|as_crispy_field}}
+
+            <br>
+
+            {{form.aobt|as_crispy_field}}
+
+            <br>
+
+            {{form.flpl_arrv_airp|as_crispy_field}}
+
+            <br>
+
+            {{form.flpl_call_sign|as_crispy_field}}
+
+            <br>
+
+            {{form.flpl_depr_airp|as_crispy_field}}
+
+            <br>
+
+            {{form.eobt|as_crispy_field}}
+
+            <br>
+
+            {{form.file_date|as_crispy_field}}
+
+            <br>
+
+            {{form.flight_state|as_crispy_field}}
+
+            <br>
+
+            {{form.flight_type|as_crispy_field}}
+
+            <br>
+
+            {{form.ifps_registration_mark|as_crispy_field}}
+
+            <br>
+
+            {{form.initial_flight_rule|as_crispy_field}}
+
+            <br>
+
+            <br>
+
+            {{form.nm_ifps_id|as_crispy_field}}
+
+            <br>
+
+            <button type="submit" class="btn btn-info"> 
+                
+                Update record &nbsp; <i class="fa fa-plus" aria-hidden="true"></i>
+            
+            </button>
+
+            &nbsp; 
+            
+            <a href="{% url 'dashboard2' %}" class="btn btn-secondary"> 
+
+
+                Return &nbsp; <i class="fa fa-arrow-left" aria-hidden="true"></i>
+
+            </a>
+
+
+        </form>
+
+    </div>
+
+    <br>
+
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,286 @@
+[2024-03-06 15:10:49 +0000] [507945] [INFO] Starting gunicorn 21.2.0
+[2024-03-06 15:10:49 +0000] [507945] [INFO] Listening at: http://107.152.44.75:8000 (507945)
+[2024-03-06 15:10:49 +0000] [507945] [INFO] Using worker: sync
+[2024-03-06 15:10:49 +0000] [507946] [INFO] Booting worker with pid: 507946
+[2024-03-06 15:10:49 +0000] [507947] [INFO] Booting worker with pid: 507947
+[2024-03-06 15:10:49 +0000] [507948] [INFO] Booting worker with pid: 507948
+[2024-03-06 15:19:01 +0000] [507945] [INFO] Handling signal: int
+[2024-03-06 15:19:01 +0000] [507948] [INFO] Worker exiting (pid: 507948)
+[2024-03-06 15:19:01 +0000] [507947] [INFO] Worker exiting (pid: 507947)
+[2024-03-06 15:19:01 +0000] [507946] [INFO] Worker exiting (pid: 507946)
+[2024-03-06 15:19:02 +0000] [507945] [INFO] Shutting down: Master
+[2024-03-06 15:19:14 +0000] [508280] [INFO] Starting gunicorn 21.2.0
+[2024-03-06 15:19:14 +0000] [508280] [INFO] Listening at: http://107.152.44.75:8000 (508280)
+[2024-03-06 15:19:14 +0000] [508280] [INFO] Using worker: sync
+[2024-03-06 15:19:14 +0000] [508281] [INFO] Booting worker with pid: 508281
+[2024-03-06 15:19:14 +0000] [508284] [INFO] Booting worker with pid: 508284
+[2024-03-06 15:19:14 +0000] [508285] [INFO] Booting worker with pid: 508285
+[2024-03-06 15:19:18 +0000] [508280] [INFO] Handling signal: int
+[2024-03-06 15:19:19 +0000] [508281] [INFO] Worker exiting (pid: 508281)
+[2024-03-06 15:19:19 +0000] [508284] [INFO] Worker exiting (pid: 508284)
+[2024-03-06 15:19:19 +0000] [508285] [INFO] Worker exiting (pid: 508285)
+[2024-03-06 15:19:19 +0000] [508280] [INFO] Shutting down: Master
+[2024-03-06 15:19:24 +0000] [508336] [INFO] Starting gunicorn 21.2.0
+[2024-03-06 15:19:24 +0000] [508336] [INFO] Listening at: http://107.152.44.75:8000 (508336)
+[2024-03-06 15:19:24 +0000] [508336] [INFO] Using worker: sync
+[2024-03-06 15:19:24 +0000] [508337] [INFO] Booting worker with pid: 508337
+[2024-03-06 15:19:24 +0000] [508338] [INFO] Booting worker with pid: 508338
+[2024-03-06 15:19:24 +0000] [508339] [INFO] Booting worker with pid: 508339
+[2024-03-06 15:23:19 +0000] [508336] [INFO] Handling signal: int
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Traceback (most recent call last):
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+    worker.init_process()
+    worker.init_process()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 142, in init_process
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 142, in init_process
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+    self.run()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 126, in run
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 126, in run
+    self.run()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 126, in run
+    self.run_for_one(timeout)
+    self.run_for_one(timeout)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 85, in run_for_one
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 85, in run_for_one
+    self.wait(timeout)
+    self.wait(timeout)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 37, in wait
+    self.run_for_one(timeout)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 37, in wait
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 85, in run_for_one
+    ret = select.select(self.wait_fds, [], [], timeout)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 197, in handle_quit
+    ret = select.select(self.wait_fds, [], [], timeout)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 197, in handle_quit
+    time.sleep(0.1)
+    self.wait(timeout)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 198, in handle_quit
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 37, in wait
+    time.sleep(0.1)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 198, in handle_quit
+    sys.exit(0)
+    ret = select.select(self.wait_fds, [], [], timeout)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 197, in handle_quit
+SystemExit: 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+    sys.exit(0)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 202, in run
+SystemExit: 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 202, in run
+    time.sleep(0.1)
+    self.manage_workers()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 198, in handle_quit
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 571, in manage_workers
+    self.manage_workers()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 571, in manage_workers
+    sys.exit(0)
+SystemExit: 0
+    self.spawn_workers()
+
+During handling of the above exception, another exception occurred:
+
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+Traceback (most recent call last):
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 202, in run
+    self.spawn_workers()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    self.spawn_worker()
+    self.manage_workers()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 625, in spawn_worker
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 571, in manage_workers
+    self.spawn_worker()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 625, in spawn_worker
+    self.log.info("Worker exiting (pid: %s)", worker.pid)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/glogging.py", line 278, in info
+    self.log.info("Worker exiting (pid: %s)", worker.pid)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/glogging.py", line 278, in info
+    self.spawn_workers()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 642, in spawn_workers
+    self.error_log.info(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1477, in info
+    self.error_log.info(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1477, in info
+    self.spawn_worker()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 625, in spawn_worker
+    self.log.info("Worker exiting (pid: %s)", worker.pid)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/glogging.py", line 278, in info
+    self.error_log.info(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1477, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self._log(INFO, msg, args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self._log(INFO, msg, args, **kwargs)
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1216, in emit
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    self.stream = self._open()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/dev-data/testpdf/exo/log/gunicorn.error.log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev-data/testpdf/exo/django_env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 233, in run
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1216, in emit
+    self.log.error("Unhandled exception in main loop",
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1506, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.stream = self._open()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/dev-data/testpdf/exo/log/gunicorn.error.log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dev-data/testpdf/exo/django_env/bin/gunicorn", line 8, in <module>
+    self.callHandlers(record)
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    sys.exit(run())
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/app/base.py", line 72, in run
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    Arbiter(self).run()
+    hdlr.handle(record)
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 233, in run
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1216, in emit
+    self.log.error("Unhandled exception in main loop",
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1216, in emit
+    self.stream = self._open()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1506, in error
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/dev-data/testpdf/exo/log/gunicorn.error.log'
+    self.stream = self._open()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/dev-data/testpdf/exo/log/gunicorn.error.log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+    self._log(ERROR, msg, args, **kwargs)
+  File "/home/dev-data/testpdf/exo/django_env/bin/gunicorn", line 8, in <module>
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    sys.exit(run())
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 233, in run
+    self.handle(record)
+    self.log.error("Unhandled exception in main loop",
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+  File "/home/dev-data/testpdf/exo/django_env/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1506, in error
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1216, in emit
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.stream = self._open()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1216, in emit
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/dev-data/testpdf/exo/log/gunicorn.error.log'
+    self.stream = self._open()
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/dev-data/testpdf/exo/log/gunicorn.error.log'
+[2024-03-06 15:23:20 +0000] [508336] [ERROR] Worker (pid:508338) exited with code 1
+[2024-03-06 15:23:20 +0000] [508336] [ERROR] Worker (pid:508338) exited with code 1.
+[2024-03-06 15:23:20 +0000] [508336] [ERROR] Worker (pid:508337) exited with code 1
+[2024-03-06 15:23:20 +0000] [508336] [ERROR] Worker (pid:508337) exited with code 1.
+[2024-03-06 15:23:20 +0000] [508336] [ERROR] Worker (pid:508339) exited with code 1
+[2024-03-06 15:23:20 +0000] [508336] [ERROR] Worker (pid:508339) exited with code 1.
+[2024-03-06 15:23:20 +0000] [508336] [INFO] Shutting down: Master
+[2024-03-06 15:23:21 +0000] [508465] [INFO] Starting gunicorn 21.2.0
+[2024-03-06 15:23:21 +0000] [508465] [INFO] Listening at: http://107.152.44.75:8000 (508465)
+[2024-03-06 15:23:21 +0000] [508465] [INFO] Using worker: sync
+[2024-03-06 15:23:21 +0000] [508466] [INFO] Booting worker with pid: 508466
+[2024-03-06 15:23:21 +0000] [508467] [INFO] Booting worker with pid: 508467
+[2024-03-06 15:23:21 +0000] [508468] [INFO] Booting worker with pid: 508468
+[2024-03-06 15:23:40 +0000] [508465] [INFO] Handling signal: int
+[2024-03-06 15:23:41 +0000] [508468] [INFO] Worker exiting (pid: 508468)
+[2024-03-06 15:23:41 +0000] [508467] [INFO] Worker exiting (pid: 508467)
+[2024-03-06 15:23:41 +0000] [508466] [INFO] Worker exiting (pid: 508466)
+[2024-03-06 15:23:41 +0000] [508465] [INFO] Shutting down: Master
+[2024-03-06 15:23:55 +0000] [508565] [INFO] Starting gunicorn 21.2.0
+[2024-03-06 15:23:55 +0000] [508565] [INFO] Listening at: http://107.152.44.75:8000 (508565)
+[2024-03-06 15:23:55 +0000] [508565] [INFO] Using worker: sync
+[2024-03-06 15:23:55 +0000] [508566] [INFO] Booting worker with pid: 508566
+[2024-03-06 15:23:55 +0000] [508567] [INFO] Booting worker with pid: 508567
+[2024-03-06 15:23:55 +0000] [508568] [INFO] Booting worker with pid: 508568
+[2024-03-06 15:24:06 +0000] [508565] [INFO] Handling signal: int
+[2024-03-06 15:24:06 +0000] [508567] [INFO] Worker exiting (pid: 508567)
+[2024-03-06 15:24:06 +0000] [508566] [INFO] Worker exiting (pid: 508566)
+[2024-03-06 15:24:06 +0000] [508568] [INFO] Worker exiting (pid: 508568)
+[2024-03-06 15:24:06 +0000] [508565] [INFO] Shutting down: Master

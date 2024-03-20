@@ -1,0 +1,40 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+<div class="mb-3">
+    <label for="uploadFile" class="form-label">Upload .xlsx File</label>
+    <input class="form-control" type="file" id="uploadFile" accept=".xlsx">
+</div>
+
+<button id="uploadButton" class="btn btn-outline-dark">Upload</button>
+
+<div id="fileContent"></div>
+
+{% block scripts %}
+<script>
+document.getElementById('uploadButton').addEventListener('click', function() {
+    const fileInput = document.getElementById('uploadFile');
+    const file = fileInput.files[0];
+    if (!file) {
+        alert('Please select a file to upload.');
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        const content = e.target.result;
+        const lines = content.split('\n').slice(0, 3); // Read the first three lines
+        const formattedContent = lines.join('<br>');
+        document.getElementById('fileContent').innerHTML = formattedContent;
+
+        // Redirect to the download view with the uploaded filename
+        window.location.href = '/upload?filename=' + encodeURIComponent(file.name);
+    };
+
+    reader.readAsText(file); // Only call reader.readAsText(file) once
+});
+
+</script>
+{% endblock %}
+{% endblock %}

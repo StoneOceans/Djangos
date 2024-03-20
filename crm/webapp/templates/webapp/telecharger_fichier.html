@@ -1,0 +1,23 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Créer et télécharger un fichier</title>
+</head>
+<body>
+    <h1>Créer et télécharger un fichier</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Envoyer">
+    </form>
+    {% if fichier %}
+    <p>Votre fichier a été créé avec succès. Cliquez sur le lien ci-dessous pour le télécharger.</p>
+    <a href="{% url 'telecharger_fichier' fichier.id %}">Télécharger {{ fichier.nom }}_{{ fichier.temps }}</a>
+    {% endif %}
+</body>
+</html>
+{% endblock %}

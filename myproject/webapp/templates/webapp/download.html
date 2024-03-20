@@ -1,0 +1,43 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download File</title>
+</head>
+<body>
+    <h1>Download File</h1>
+    <p>{{filedownload}}</p>
+    <p>Click the button below to download the file.</p>
+    <!-- Update the URL in the href attribute based on your endpoint -->
+    <a id="downloadButton1" href="{% url 'download_file' %}" style="display: none;"> </a>
+    <button onclick="downloadFile1()">Download File</button>
+
+    <h1>Download second File</h1>
+    <p>Click the button below to download the second file.</p>
+    <!-- Update the URL in the href attribute based on your endpoint -->
+    <a id="downloadButton2" href="{% url 'download_file2' %}" style="display: none;"> </a>
+    <button onclick="downloadFile2()">Download 2nd File</button>
+
+
+    <script>
+        function downloadFile1() {
+            // Select the hidden download link
+            const downloadLink = document.getElementById('downloadButton1');
+            // Trigger the download link programmatically
+            downloadLink.click();
+        }
+
+        function downloadFile2() {
+            // Select the hidden download link
+            const downloadLink = document.getElementById('downloadButton2');
+            // Trigger the download link programmatically
+            downloadLink.click();
+        }
+    </script>
+</body>
+</html>
+{% endblock %}

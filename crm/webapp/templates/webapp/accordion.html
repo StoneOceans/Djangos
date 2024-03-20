@@ -1,0 +1,45 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+
+<nav class="navbar navbar-dark">
+  <form class="form-inline" id="search-form">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search_query">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+  {% if records %}
+    <div id="accordion">
+      {% for record in records %}
+      <div class="card mb-3" style="width: 39.07rem;">
+        <div class="card" id="heading{{ record.id }}">
+          <h5 class="mb-0">
+            <button class=" btn btn-link btn-lg" data-toggle="collapse" data-target="#collapse{{ record.id }}" aria-controls="collapse{{ record.id }}">
+              {{ record.flpl_call_sign }} | {{ record.flpl_depr_airp }} | {{ record.flpl_arrv_airp }} | {{ record.airc_type }} | {{ record.aobt }}
+          </h5>
+        </div>
+
+        <div id="collapse{{ record.id }}" class="collapse" aria-labelledby="heading{{ record.id }}" data-parent="#accordion">
+          <div class="card-body">
+            <p> <strong> ID: </strong> {{ record.id }} </p>
+            <p> <strong> Call Sign: </strong> {{ record.flpl_call_sign }} </p>
+            <p> <strong> Departure Airport: </strong> {{ record.flpl_depr_airp }} </p>
+            <p> <strong> Arrival Airport: </strong> {{ record.flpl_arrv_airp }} </p>
+            <p> <strong> Aircraft Type: </strong> {{ record.airc_type }} </p>
+            <p> <strong> AOBT: </strong> {{ record.aobt }} </p>
+            <p> <strong> Airport Modes Adress: </strong> {{record.airc_modes_address}} </p>
+            <p> <strong> EOBT: </strong> {{record.eobt}} </p>
+            <p> <strong> Airport Type : </strong> {{record.airc_type}} </p>
+            <p> <strong> File Date: </strong> {{record.file_date}} </p>
+            <p> <strong> Flight State: </strong> {{record.flight_state}} </p>
+            <p> <strong> Ifps Registration Mark: </strong> {{record.ifps_registration_mark}} </p>
+            <p> <strong> Initial Flight Rule: </strong> {{record.initial_flight_rule}} </p>
+            <p> <strong> NM IFPS ID: </strong> {{record.nm_ifps_id}} </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}

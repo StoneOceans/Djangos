@@ -1,0 +1,17 @@
+{% extends 'webapp/base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Download File</div>
+                <div class="card-body">
+                    <h2 class="card-title">Download File</h2>
+                    <p class="card-text">Le fichier finale est à télécharger ici.</p>
+                    <a href="{% url 'download_file2' %}" class="btn btn-light btn-lg btn-block">Télécharger le fichier final</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

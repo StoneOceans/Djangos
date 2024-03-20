@@ -1,0 +1,65 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+
+    <h5> This is a dashboard 🩵! </h5>
+
+    <hr>
+
+    <a class="btn btn-outline-info btn-sm" href="{% url 'views_table' %}">
+
+        See the full table &nbsp; <i class="fa fa-address-card" aria-hidden="true"></i>
+
+    </a>
+
+    <hr> 
+
+    <table class="table table-hover table-bordered">
+
+        <thead class="table-light">
+
+            <tr>
+
+                <th scope="col"> airc_type </th>
+                <th scope="col"> aobt </th>
+                <th scope="col"> flpl_arrv_airp </th>
+                <th scope="col"> flpl_call_sign </th>
+                <th scope="col"> flpl_depr_airp</th>
+
+                <th scope="col"> View </th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% if records %}
+
+            {% for record in records %}
+
+            <tr>
+
+
+                <td> {{record.flpl_call_sign}} </td>
+                <td> {{record.flpl_depr_airp}} </td>
+                <td> {{record.flpl_arrv_airp}} </td>
+                <td> {{record.airc_type}} </td>
+                <td> {{record.aobt}} </td>
+                <td> <a class="btn btn-info btn-sm" href="{% url 'redevance' record.id%}"><i class="fa fa-eye" aria-hidden="true"></i> </a> </td>
+
+
+            </tr>
+
+            {% endfor %}
+        
+        {% endif %}
+
+
+        </tbody>
+
+
+    </table>
+
+
+{% endblock %}

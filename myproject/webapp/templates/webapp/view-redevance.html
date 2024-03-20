@@ -1,0 +1,42 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+
+    <div class="card">
+
+
+        <div class="card-body">
+
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i> &nbsp;
+
+            <hr> 
+
+            <p> <strong> ID: </strong> {{record.id}} </p>
+            
+            <p> <strong> Call_sign: </strong> {{record.flpl_call_sign}} </p>
+
+            <p> <strong> Depart airp: </strong> {{record.flpl_depr_airp}} </p>
+
+            <p> <strong> Arrivée Airp: </strong>{{record.flpl_arrv_airp}} </p>
+
+            <p> <strong> Airc Type: </strong> {{record.airc_type}} </p>
+
+            <p> <strong> Aobt: </strong> {{record.aobt}} </p>
+
+
+
+        </div>
+
+
+    </div>
+
+    <br>
+
+    <a href="{% url 'dashboard2' %}" class="btn btn-secondary"> Return &nbsp; <i class="fa fa-star-o" aria-hidden="true"></i> </a>
+    &nbsp;
+
+    <a href="{% url 'update-redevance' record.id %}" class="btn btn-info"> Update record &nbsp; <i class="fa fa-plus" aria-hidden="true"></i> </a>
+
+
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+
+    <h5> Full table </h5>
+
+    <hr>
+
+    <a class="btn btn-outline-info btn-sm" href="{% url 'create-record' %}">
+
+       Modify the record &nbsp; <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+    </a>
+
+    <hr> 
+
+    <table class="table table-hover table-bordered">
+
+        <thead class="table-light">
+
+            <tr>
+                <th scope="col"> airc_type </th>
+                <th scope="col"> aobt </th>
+                <th scope="col"> flpl_arrv_airp </th>
+                <th scope="col"> flpl_call_sign </th>
+                <th scope="col"> flpl_depr_airp</th>
+                <th scope="col"> eobt </th>
+                <th scope="col"> file_date </th>
+                <th scope="col"> flight_state</th>
+                <th scope="col"> flight_type</th>
+                <th scope="col"> ifps_registration_mark</th>
+                <th scope="col"> initial_flight_rule</th>
+                <th scope="col"> nm_ifps_id</th>
+                <th scole="col">Update/th>
+
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% if records %}
+
+            {% for record in records %}
+
+            <tr>
+
+                <td> {{record.flpl_call_sign}} </td>
+                <td> {{record.flpl_depr_airp}} </td>
+                <td> {{record.flpl_arrv_airp}} </td>
+                <td> {{record.airc_type}} </td>
+                <td> {{record.aobt}} </td>
+                <td> {{record.airc_modes_address}} </td>
+                <td> {{record.eobt}} </td>
+                <td> {{record.airc_type}} </td>
+                <td> {{record.file_date}} </td>
+                <td> {{record.flight_state}} </td>
+                <td> {{record.ifps_registration_mark}} </td>
+                <td> {{record.initial_flight_rule}} </td>
+                <td> {{record.nm_ifps_id}} </td>
+                <td><a href="{% url 'update-redevance' record.id %}" class="btn btn-info"> Update record &nbsp; <i class="fa fa-plus" aria-hidden="true"></i> </a></td>
+
+            </tr>
+
+            {% endfor %}
+        
+        {% endif %}
+
+
+        </tbody>
+
+
+    </table>
+
+
+{% endblock %}
